@@ -14,4 +14,6 @@ for (column in colnames(customer_info)){
 IV <- Information::create_infotables(data=customer_info, y="got_a_TV", bins=10, parallel=FALSE)
 IV_value = data.frame(IV$Summary)
 print(IV_value)
+# amount_financing is strongest predictor
+# amount_purchase, LT_clients, promotions_used, require_financing are medium predictors
 Information::plot_infotables(IV, IV$Summary$Variable[1:23], same_scale=FALSE, show_values=TRUE)
